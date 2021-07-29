@@ -34,6 +34,7 @@ Technologies used.
 - Redux
 - ES6
 - Node.js
+- Git flow
 
 ### Getting Started
 
