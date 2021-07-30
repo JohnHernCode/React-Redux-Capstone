@@ -23,7 +23,7 @@ Deployment available via Heroku.
 
 ## Live Demo
 
-[Heroku Demo](https://placeholder.herokuapp.com/) v 1.0
+[Heroku Demo](https://react-redux-capstone-project.herokuapp.com/) v 1.0
 
 ### Built With
 
