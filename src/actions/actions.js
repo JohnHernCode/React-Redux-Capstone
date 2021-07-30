@@ -1,5 +1,6 @@
 const ADD_POKEMON = 'ADD_POKEMON';
 const CHANGE_FILTER = 'CHANGE_FILTER';
+const CATEGORY_POKEMON = 'CATEGORY_POKEMON';
 
 const addPokemon = pokemon => ({
   type: ADD_POKEMON,
@@ -11,7 +12,12 @@ const changeFilter = filter => ({
   payload: filter,
 });
 
+const categoryPokemon = catPokemon => ({
+  type: CATEGORY_POKEMON,
+  payload: catPokemon,
+});
+
 
 export {
-  ADD_POKEMON, addPokemon, CHANGE_FILTER, changeFilter,
+  ADD_POKEMON, addPokemon, CHANGE_FILTER, changeFilter, CATEGORY_POKEMON, categoryPokemon
 };
