@@ -3,7 +3,7 @@ import Navbar from "../containers/Nav";
 import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { fetchPokeData } from '../api-requests/request';
+import { fetchPokeData } from '../api/request';
 
 const Pokemon = ({ location }) => {
   const [data, setData] = useState(null);

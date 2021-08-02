@@ -4,7 +4,7 @@ import React, { useEffect } from 'react';
 import PokemonListing from '../containers/PokemonArea';
 import CategoryFilter from './CategoryFilter';
 import { changeFilter, addPokemon, categoryPokemon } from '../actions/actions';
-import { allPokemons, pokemonByCategory } from '../api-requests/request';
+import { allPokemon, pokemonByCategory } from '../api/request';
 
 const PokemonList = ({
                        filter,
@@ -20,7 +20,7 @@ const PokemonList = ({
 
   useEffect(async () => {
     if (pokes.length === 0) {
-      const allPokes = await allPokemons();
+      const allPokes = await allPokemon();
       addPokemon(allPokes);
     }
   }, []);

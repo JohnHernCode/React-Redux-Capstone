@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from './Navbar';
+import Navbar from './Nav';
 import PokemonList from '../components/PokemonList';
 
 const Home = () => (
