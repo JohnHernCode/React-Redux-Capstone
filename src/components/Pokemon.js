@@ -1,4 +1,5 @@
 import React from 'react';
+import Navbar from "../containers/Nav";
 import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
@@ -27,11 +28,11 @@ const Pokemon = ({ location }) => {
   if (data) {
     return (
         <span>
-        {/*<Navbar /> will be here */}
+        <Navbar />
         <div>
           <div>
             <h1>{name}</h1>
-            {/* Image here */}
+            <img src={data.sprites.front_default} alt={name} />
             <div>
               <div>
                 {`${data.height * 10}cm`}
