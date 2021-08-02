@@ -66,13 +66,13 @@ const Pokemon = ({ location }) => {
               </Typography>
               <img src={data.sprites.front_default} className={style.imgSize} alt={name} />
               <Typography className={classes.title} color="textSecondary" gutterBottom>
-                {`${data.height * 10}cm`}
+                {`Height: ${data.height * 10}cm`}
               </Typography>
               <Typography className={classes.title} color="textSecondary" gutterBottom>
-                {`${data.weight / 10}kg`}
+                {`Weight: ${data.weight / 10}kg`}
               </Typography>
               <Typography className={classes.title} color="textSecondary" gutterBottom>
-                {`${data.id}`}
+                {`Base XP: ${data.base_experience}`}
               </Typography>
             </CardContent>
           </Card>
