@@ -27,7 +27,7 @@ const PokemonList = ({
 
   useEffect(async () => {
     if (categorizedPokes.length === 0) {
-      const catPokes = await pokemonByCategory();
+      const catPokes = pokemonByCategory();
       categoryPokemon(catPokes);
     }
   }, []);

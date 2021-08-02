@@ -1,0 +1,12 @@
+@media (min-width: 720px) {
+  .cardCenter {
+    margin-left: 400px;
+    margin-right: 600px;
+    margin-top: 80px;
+  }
+}
+
+.imgSize {
+  height: 150px;
+  width: 150px;
+}
