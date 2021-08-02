@@ -1,14 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import style from './nav.module.css';
+import navImage from '../images/pokedex.png';
+import { Tabs, AppBar} from "@material-ui/core";
 
 function Navbar() {
   return (
       <>
-        <span>
-          <h2>Pokemon Pokédex</h2>
-          <Link to="/">Home </Link>
-          <Link to="/about">About </Link>
-        </span>
+        <AppBar position={"static"}>
+          <Tabs>
+            <img src={navImage} className={style.logo} alt="Logo" />
+            <Link to="/" className={style.linkStyle}>Home </Link>
+            <Link to="/about" className={style.linkStyle}>About </Link>
+          </Tabs>
+        </AppBar>
       </>
   );
 }
