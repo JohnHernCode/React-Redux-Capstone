@@ -1,0 +1,9 @@
+.container {
+  max-width: 980px;
+  min-width: 320px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}

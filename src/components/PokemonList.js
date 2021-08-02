@@ -5,6 +5,8 @@ import PokemonListing from '../containers/PokemonArea';
 import CategoryFilter from './CategoryFilter';
 import { changeFilter, addPokemon, categoryPokemon } from '../actions/actions';
 import { allPokemon, pokemonByCategory } from '../api/request';
+import style from './pokemonlist.module.css';
+
 
 const PokemonList = ({
                        filter,
@@ -14,6 +16,7 @@ const PokemonList = ({
                        addPokemon,
                        categoryPokemon,
                      }) => {
+
   const handleFilterChange = filter => {
     changeFilter(filter);
   };
@@ -55,17 +58,19 @@ const PokemonList = ({
   const pokeRender = filter[0] === 0 || filter[0] === 'All' ? renderAll(pokes) : renderCat(categorizedPokes[0], filter);
 
   return (
-      <div>
+      <>
         <div>
           <CategoryFilter
               clickHandler={handleFilterChange}
               filter={filter}
           />
         </div>
-        <div>
+        <div className={style.container}>
+          <div className={style.row}>
           {pokeRender}
+          </div>
         </div>
-      </div>
+      </>
   );
 };
 

@@ -1,0 +1,7 @@
+.column {
+  text-align: center;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  margin: 10px;
+}
