@@ -1,63 +1,6 @@
-@media (min-width: 720px) {
-  .cardCenter {
-    margin-left: 400px;
-    margin-right: 600px;
-    margin-top: 80px;
-  }
-}
-
-.imgSize {
-  height: 150px;
-  width: 100%;
-}
-
 .flex {
   display: flex;
   justify-content: center;
-}
-
-.mainDiv {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 2em;
-  color: #020122;
-  text-decoration: none;
-  padding: 1em;
-  border: 5px solid #e12828;
-  border-radius: 10px;
-  background-image: url(../images/pokeball.png);
-  background-color: #fff;
-  background-size: 5em;
-  background-repeat: no-repeat;
-  background-position-x: -25%;
-  background-position-y: center;
-  -webkit-box-shadow: 0 0 14px 0 rgb(225, 40, 40);
-  -moz-box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.75);
-  box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.75);
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-}
-
-.mainDiv img {
-  width: 10em;
-  height: 10em;
-  align-self: center;
-}
-
-h1::first-letter {
-  text-transform: capitalize;
-}
-
-.data {
-  font-size: 2em;
-}
-
-.icon {
-  text-align: center;
-  font-size: 2em;
-  margin-top: 2px;
-  margin-right: 20px;
 }
 
 .leftColumn {
@@ -66,10 +9,11 @@ h1::first-letter {
 }
 
 .blogImg {
-  background-color: #aaa;
+  background-color: rgb(255, 189, 21);
   width: 100%;
   height: 400px;
   padding: 20px;
+  border-radius: 10px;
 }
 
 .card {
