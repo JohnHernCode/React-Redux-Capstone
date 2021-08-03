@@ -5,3 +5,13 @@
   flex-basis: auto;
   margin: 10px;
 }
+
+.text {
+  text-decoration: none;
+  color: #0c1665;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+}

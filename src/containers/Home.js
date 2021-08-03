@@ -6,9 +6,10 @@ import style from './home.module.css';
 const Home = () => (
   <>
     <Navbar />
-    <h1 className={style.text}>
-      Welcome to the Pokédex. Find out information about your favorite Pokemon.
-    </h1>
+    <div className={style.header}>
+      <h1>Welcome to the PokeDex</h1>
+      <p>Click your favorite Pokemon below</p>
+    </div>
     <PokemonList />
   </>
 );

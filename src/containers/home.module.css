@@ -1,3 +1,13 @@
 .text {
-  color: #fff;
+  color: #000;
+}
+
+.header {
+  padding: 20px;
+  text-align: center;
+  background: #0c1665;
+  color: white;
+  font-size: 30px;
+  margin-left: 10px;
+  border-radius: 5px;
 }

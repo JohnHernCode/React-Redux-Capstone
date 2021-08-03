@@ -59,3 +59,32 @@ h1::first-letter {
   margin-top: 2px;
   margin-right: 20px;
 }
+
+.leftColumn {
+  float: left;
+  width: 100%;
+}
+
+.blogImg {
+  background-color: #aaa;
+  width: 100%;
+  height: 400px;
+  padding: 20px;
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+  -webkit-box-shadow: 0 0 14px 0 rgb(225, 40, 40);
+  -moz-box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.75);
+  box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.75);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+}

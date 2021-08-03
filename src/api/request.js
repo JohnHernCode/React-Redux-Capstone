@@ -37,4 +37,4 @@ export const fetchPokeData = async (url) => {
   }
 };
 
-export const artUrl = (id) => `https://raw.githubusercontent.com/PokeAPI/sprites/d41c408f7e5be9848260f470e34069c264091a69/sprites/pokemon/${id}.png`;
+export const artUrl = (id) => `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`;
