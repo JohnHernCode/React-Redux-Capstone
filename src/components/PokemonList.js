@@ -35,11 +35,11 @@ const PokemonList = ({
 
   const renderAll = (pokemon) => (
     <div>
-      {pokemon.map((poke, index) => (
+      {pokemon.map((poke) => (
         <PokemonListing
           poke={poke.name}
           url={poke.url}
-          id={index + 1}
+          id={poke.url.match(/\/(\d+)\//gi)[0].replaceAll('/', '')}
           key={poke.name}
         />
       ))}
@@ -48,12 +48,12 @@ const PokemonList = ({
 
   const renderCat = (pokemon, filter) => (
     <div>
-      {pokemon[filter - 1].map((name, item) => (
+      {pokemon[filter - 1].map((name) => (
         <PokemonListing
           poke={name.pokemon.name}
           url={name.pokemon.url}
-          id={item + 1}
-          key={pokemon.name}
+          id={name.pokemon.url.match(/\/(\d+)\//gi)[0].replaceAll('/', '')}
+          key={name.pokemon.name}
         />
       ))}
     </div>

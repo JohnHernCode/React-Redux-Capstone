@@ -42,11 +42,11 @@ const PokemonListing = ({ poke, url, id }) => {
 PokemonListing.propTypes = {
   poke: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
-  id: PropTypes.number,
+  id: PropTypes.string,
 };
 
 PokemonListing.defaultProps = {
-  id: PropTypes.number,
+  id: PropTypes.string,
 };
 
 export default PokemonListing;
