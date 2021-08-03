@@ -18,7 +18,7 @@ export const pokemonByCategory = () => {
 
 export const allPokemon = async () => {
   try {
-    const response = await fetch(`${API}pokemon?offset=0&limit=1118`);
+    const response = await fetch(`${API}pokemon?offset=0&limit=20`);
     const newDataJson = await response.json();
     const result = newDataJson.results;
     return result;
@@ -36,3 +36,5 @@ export const fetchPokeData = async (url) => {
     return null;
   }
 };
+
+export const artUrl = (id) => `https://raw.githubusercontent.com/PokeAPI/sprites/d41c408f7e5be9848260f470e34069c264091a69/sprites/pokemon/${id}.png`;

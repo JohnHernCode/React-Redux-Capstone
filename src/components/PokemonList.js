@@ -35,18 +35,24 @@ const PokemonList = ({
 
   const renderAll = (pokemon) => (
     <div>
-      {pokemon.map((poke) => (
-        <PokemonListing poke={poke.name} url={poke.url} key={poke.name} />
+      {pokemon.map((poke, index) => (
+        <PokemonListing
+          poke={poke.name}
+          url={poke.url}
+          id={index + 1}
+          key={poke.name}
+        />
       ))}
     </div>
   );
 
   const renderCat = (pokemon, filter) => (
     <div>
-      {pokemon[filter - 1].map((name) => (
+      {pokemon[filter - 1].map((name, item) => (
         <PokemonListing
           poke={name.pokemon.name}
           url={name.pokemon.url}
+          id={item + 1}
           key={pokemon.name}
         />
       ))}

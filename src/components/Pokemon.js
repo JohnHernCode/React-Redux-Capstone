@@ -71,7 +71,7 @@ const Pokemon = ({ location }) => {
                 {`Weight: ${data.weight / 10}kg`}
               </Typography>
               <Typography className={classes.title} color="textSecondary" gutterBottom>
-                {`Base XP: ${data.base_experience}`}
+                {`Type: ${data.types[0].type.name}`}
               </Typography>
             </CardContent>
           </div>

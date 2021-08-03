@@ -7,6 +7,7 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import style from './pokemonarea.module.css';
+import { artUrl } from '../api/request';
 
 const useStyles = makeStyles({
   root: {
@@ -17,7 +18,7 @@ const useStyles = makeStyles({
   },
 });
 
-const PokemonListing = ({ poke, url }) => {
+const PokemonListing = ({ poke, url, id }) => {
   const classes = useStyles();
 
   function capitalizeLetters(string) {
@@ -26,10 +27,11 @@ const PokemonListing = ({ poke, url }) => {
 
   return (
     <div className={style.column}>
-      <Card className={classes.root} variant="outlined">
+      <Card className={classes.root}>
         <CardContent>
           <Typography className={classes.title} color="textSecondary" gutterBottom>
-            <Link to={{ pathname: `/pokemon/${poke}`, state: { poke, url } }}>{capitalizeLetters(poke)}</Link>
+            <Link to={{ pathname: `/pokemon/${poke}`, state: { poke, url, id } }}>{capitalizeLetters(poke)}</Link>
+            <img alt={poke} src={artUrl(id)} />
           </Typography>
         </CardContent>
       </Card>
@@ -40,6 +42,11 @@ const PokemonListing = ({ poke, url }) => {
 PokemonListing.propTypes = {
   poke: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
+  id: PropTypes.number,
+};
+
+PokemonListing.defaultProps = {
+  id: PropTypes.number,
 };
 
 export default PokemonListing;
