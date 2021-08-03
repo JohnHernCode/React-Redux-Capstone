@@ -20,8 +20,8 @@ const useStyles = makeStyles({
 const PokemonListing = ({ poke, url }) => {
   const classes = useStyles();
 
-  function capitalizeFirstLetter(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
+  function capitalizeLetters(string) {
+    return string.toUpperCase();
   }
 
   return (
@@ -29,7 +29,7 @@ const PokemonListing = ({ poke, url }) => {
       <Card className={classes.root} variant="outlined">
         <CardContent>
           <Typography className={classes.title} color="textSecondary" gutterBottom>
-            <Link to={{ pathname: `/pokemon/${poke}`, state: { poke, url } }}>{capitalizeFirstLetter(poke)}</Link>
+            <Link to={{ pathname: `/pokemon/${poke}`, state: { poke, url } }}>{capitalizeLetters(poke)}</Link>
           </Typography>
         </CardContent>
       </Card>

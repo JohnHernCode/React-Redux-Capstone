@@ -57,16 +57,14 @@ const PokemonList = ({
 
   return (
     <>
-      <div>
+      <div className={style.catDiv}>
         <CategoryFilter
           clickHandler={handleFilterChange}
           filter={filter}
         />
       </div>
-      <div className={style.container}>
-        <div className={style.row}>
-          {pokeRender}
-        </div>
+      <div className={style.pokeDiv}>
+        {pokeRender}
       </div>
     </>
   );
