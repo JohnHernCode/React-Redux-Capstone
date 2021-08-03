@@ -7,17 +7,15 @@ import { changeFilter, addPokemon, categoryPokemon } from '../actions/actions';
 import { allPokemon, pokemonByCategory } from '../api/request';
 import style from './pokemonlist.module.css';
 
-
 const PokemonList = ({
-                       filter,
-                       changeFilter,
-                       pokes,
-                       categorizedPokes,
-                       addPokemon,
-                       categoryPokemon,
-                     }) => {
-
-  const handleFilterChange = filter => {
+  filter,
+  changeFilter,
+  pokes,
+  categorizedPokes,
+  addPokemon,
+  categoryPokemon,
+}) => {
+  const handleFilterChange = (filter) => {
     changeFilter(filter);
   };
 
@@ -35,46 +33,46 @@ const PokemonList = ({
     }
   }, []);
 
-  const renderAll = pokemon => (
-      <div>
-        {pokemon.map(poke => (
-            <PokemonListing poke={poke.name} url={poke.url} key={poke.name} />
-        ))}
-      </div>
+  const renderAll = (pokemon) => (
+    <div>
+      {pokemon.map((poke) => (
+        <PokemonListing poke={poke.name} url={poke.url} key={poke.name} />
+      ))}
+    </div>
   );
 
   const renderCat = (pokemon, filter) => (
-      <div>
-        {pokemon[filter - 1].map(name => (
-            <PokemonListing
-                poke={name.pokemon.name}
-                url={name.pokemon.url}
-                key={pokemon.name}
-            />
-        ))}
-      </div>
+    <div>
+      {pokemon[filter - 1].map((name) => (
+        <PokemonListing
+          poke={name.pokemon.name}
+          url={name.pokemon.url}
+          key={pokemon.name}
+        />
+      ))}
+    </div>
   );
 
   const pokeRender = filter[0] === 0 || filter[0] === 'All' ? renderAll(pokes) : renderCat(categorizedPokes[0], filter);
 
   return (
-      <>
-        <div>
-          <CategoryFilter
-              clickHandler={handleFilterChange}
-              filter={filter}
-          />
-        </div>
-        <div className={style.container}>
-          <div className={style.row}>
+    <>
+      <div>
+        <CategoryFilter
+          clickHandler={handleFilterChange}
+          filter={filter}
+        />
+      </div>
+      <div className={style.container}>
+        <div className={style.row}>
           {pokeRender}
-          </div>
         </div>
-      </>
+      </div>
+    </>
   );
 };
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   pokes: state.pokes,
   filter: state.filter,
   categorizedPokes: state.categoryPokemon,

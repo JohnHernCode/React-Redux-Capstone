@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import style from './pokemonarea.module.css';
 
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
+import style from './pokemonarea.module.css';
 
 const useStyles = makeStyles({
   root: {
@@ -18,7 +18,6 @@ const useStyles = makeStyles({
 });
 
 const PokemonListing = ({ poke, url }) => {
-
   const classes = useStyles();
 
   function capitalizeFirstLetter(string) {
@@ -26,15 +25,15 @@ const PokemonListing = ({ poke, url }) => {
   }
 
   return (
-      <div className={style.column}>
-        <Card className={classes.root} variant="outlined">
-          <CardContent>
-            <Typography className={classes.title} color="textSecondary" gutterBottom>
-              <Link to={{ pathname: `/pokemon/${poke}`, state: { poke, url } }}>{capitalizeFirstLetter(poke)}</Link>
-            </Typography>
-          </CardContent>
-        </Card>
-      </div>
+    <div className={style.column}>
+      <Card className={classes.root} variant="outlined">
+        <CardContent>
+          <Typography className={classes.title} color="textSecondary" gutterBottom>
+            <Link to={{ pathname: `/pokemon/${poke}`, state: { poke, url } }}>{capitalizeFirstLetter(poke)}</Link>
+          </Typography>
+        </CardContent>
+      </Card>
+    </div>
   );
 };
 

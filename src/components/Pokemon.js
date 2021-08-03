@@ -1,14 +1,14 @@
-import React from 'react';
-import Navbar from "../containers/Nav";
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import style from './pokemon.module.css';
-import { useState, useEffect } from 'react';
+
 import { useParams } from 'react-router-dom';
-import { fetchPokeData } from '../api/request';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
+import style from './pokemon.module.css';
+import Navbar from '../containers/Nav';
+import { fetchPokeData } from '../api/request';
 
 const useStyles = makeStyles({
   root: {
@@ -22,8 +22,8 @@ const useStyles = makeStyles({
   },
   title: {
     fontSize: 18,
-    textAlign: "center",
-    fontWeight: "bold",
+    textAlign: 'center',
+    fontWeight: 'bold',
   },
   pos: {
     marginBottom: 12,
@@ -32,9 +32,7 @@ const useStyles = makeStyles({
 
 const Pokemon = ({ location }) => {
   const classes = useStyles();
-  const Capitalize = (str) => {
-    return str.charAt(0).toUpperCase() + str.slice(1);
-  }
+  const Capitalize = (str) => str.charAt(0).toUpperCase() + str.slice(1);
   const [data, setData] = useState(null);
 
   let name;
@@ -56,7 +54,7 @@ const Pokemon = ({ location }) => {
 
   if (data) {
     return (
-        <span>
+      <span>
         <Navbar />
         <div className={style.cardCenter}>
           <Card className={classes.root}>
@@ -81,7 +79,7 @@ const Pokemon = ({ location }) => {
     );
   }
   return (
-      <p>Fetching Data...</p>
+    <p>Fetching Data...</p>
   );
 };
 

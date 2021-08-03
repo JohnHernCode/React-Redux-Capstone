@@ -5,17 +5,17 @@ import { connect } from 'react-redux';
 const categories = ['All', 'Normal', 'Fighting', 'Flying', 'Poison', 'Ground', 'Rock', 'Bug', 'Ghost', 'Steel', 'Fire', 'Water', 'Grass', 'Electric', 'Psychic', 'Ice', 'Dragon', 'Dark', 'Fairy'];
 
 const CategoryFilter = ({ clickHandler }) => {
-  const handleChange = e => {
+  const handleChange = (e) => {
     clickHandler([categories.indexOf(e.target.value)]);
   };
   return (
-      <div>
-        <select onChange={handleChange}>
-          {categories.map(cat => (
-              <option value={cat} key={cat}>{cat}</option>
-          ))}
-        </select>
-      </div>
+    <div>
+      <select onChange={handleChange}>
+        {categories.map((cat) => (
+          <option value={cat} key={cat}>{cat}</option>
+        ))}
+      </select>
+    </div>
   );
 };
 
@@ -23,7 +23,7 @@ CategoryFilter.propTypes = {
   clickHandler: PropTypes.func.isRequired,
 };
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   filter: state,
 });
 

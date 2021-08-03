@@ -6,8 +6,8 @@ export const pokemonByCategory = () => {
     const categoryArray = [];
     while (categoryId < 19) {
       fetch(`${API}type/${categoryId}`)
-          .then(response => response.json())
-          .then(result => categoryArray.push(result.pokemon));
+        .then((response) => response.json())
+        .then((result) => categoryArray.push(result.pokemon));
       categoryId += 1;
     }
     return categoryArray;
@@ -27,7 +27,7 @@ export const allPokemon = async () => {
   }
 };
 
-export const fetchPokeData = async url => {
+export const fetchPokeData = async (url) => {
   try {
     const response = await fetch(url);
     const newData = await response.json();
