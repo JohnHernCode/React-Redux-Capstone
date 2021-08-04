@@ -1,12 +1,14 @@
 import React from 'react';
 import Navbar from './Nav';
+import style from './about.module.css';
 
 const About = () => (
   <>
     <Navbar />
-    <h1>
-      This Pokédex project is made for the React capstone for Microverse.
-    </h1>
+    <div className={style.header}>
+      <h1>Hi There!</h1>
+      <p>This project is part of the Microverse React Capstone</p>
+    </div>
   </>
 );
 
