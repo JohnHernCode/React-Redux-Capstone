@@ -36,7 +36,9 @@ const Pokemon = ({ location }) => {
             <div className={style.leftColumn}>
               <div className={style.card}>
                 <h2>{Capitalize(name)}</h2>
-                <h5>{`Type: ${Capitalize(data.types[0].type.name)}`}</h5>
+                <span className={style.flexTypes}>
+                  <h5>{`Types: ${Capitalize(data.types[0].type.name)}`}</h5>
+                </span>
                 <img src={artUrl(data.id)} className={style.blogImg} alt={name} />
                 <p>{`Height: ${data.height * 10}cm`}</p>
                 <p>{`Weight: ${data.weight / 10}kg`}</p>

@@ -3,6 +3,11 @@
   justify-content: center;
 }
 
+.flexTypes {
+  display: flex;
+  justify-content: space-around;
+}
+
 .leftColumn {
   float: left;
   width: 100%;
