@@ -1,0 +1,39 @@
+.container {
+  max-width: 980px;
+  min-width: 320px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.catDiv {
+  text-align: center;
+}
+
+.pokeDiv > * {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  text-align: center;
+  font-size: 2em;
+  gap: 0.5em;
+}
+
+.pokeDiv > * > * {
+  background-color: rgb(255, 189, 21);
+  text-decoration: none;
+  padding: 1em;
+  border: 3px solid #fff;
+  border-radius: 10px;
+  background-image: url(../images/pokeball.png);
+  background-size: 3em;
+  background-repeat: no-repeat;
+  background-position-x: -25%;
+  background-position-y: center;
+}
+
+.pokeDiv > * > *:hover {
+  color: #fff;
+  border: 3px solid #fff;
+}

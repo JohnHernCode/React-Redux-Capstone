@@ -14,16 +14,16 @@
 ## About The Project
 
 This is the Microverse React Redux Capstone Project. The design of the project to simulate a
-real world catalogue of statistics. The project uses Node, React, React-DOM, Redux, CSS, and ES6. 
+real world catalogue of information, in this case, Pokemon data. The project uses Node, React, React-DOM, Redux, CSS, and ES6. 
 Deployment available via Heroku.
 
 ## Screen Shot
 
-![screenshot](/screen.jpg)
+![Gif](/Preview.gif)
 
 ## Live Demo
 
-[Heroku Demo](https://placeholder.herokuapp.com/) v 1.0
+[Heroku Demo](https://react-redux-capstone-project.herokuapp.com/) v 1.0
 
 ### Built With
 
@@ -66,8 +66,10 @@ To get a local copy up and running follow these simple example steps.
 4. It should automatically open in your default browser.
 
 ### How to use the site
-TBA
+Simply click on a Pokemon character and view its data.
 
+### How to run tests
+In the console, run ```npm test```. The tests will start.
 
 <!-- CONTACT -->
 

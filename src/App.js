@@ -1,18 +1,19 @@
 import React from 'react';
-import './App.css';
-import { Provider } from "react-redux";
-import store from './store';
+import { Provider } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom';
+import { createStore } from 'redux';
+import Routes from './routes/Routes';
+import rootReducer from './reducers/index';
 
+const store = createStore(rootReducer);
 
 function App() {
   return (
-      <Provider store={store}>
-        <div className="App">
-          <header className="App-header">
-            <p>Welcome to React</p>
-          </header>
-        </div>
-      </Provider>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Routes />
+      </BrowserRouter>
+    </Provider>
   );
 }
 
