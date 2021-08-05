@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { useParams } from 'react-router-dom';
 import style from './pokemon.module.css';
 import Navbar from '../containers/Nav';
-import { fetchPokeData } from '../api/request';
+import { artUrl, fetchPokeData } from '../api/request';
 
 const Pokemon = ({ location }) => {
   const Capitalize = (str) => str.toUpperCase();
@@ -39,7 +39,7 @@ const Pokemon = ({ location }) => {
                 <span className={style.flexTypes}>
                   <h5>{`Types: ${Capitalize(data.types[0].type.name)}`}</h5>
                 </span>
-                <img src={data.sprites.front_default} className={style.blogImg} alt={name} />
+                <img src={artUrl(data.id)} className={style.blogImg} alt={name} />
                 <p>{`Height: ${data.height * 10}cm`}</p>
                 <p>{`Weight: ${data.weight / 10}kg`}</p>
               </div>
