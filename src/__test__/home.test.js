@@ -145,4 +145,10 @@ describe('Test the Categories of the Home page', () => {
     userEvent.click(screen.getByText('Fairy'), leftClick);
     expect(screen.getByText('Fairy'));
   });
+
+  it('Doesnt displays the All category in the home page', () => {
+    const leftClick = { button: 0 };
+    userEvent.click(screen.getByText('Dark'), leftClick);
+    expect(screen.getByText('Dark')).not.toBe('All');
+  });
 });
