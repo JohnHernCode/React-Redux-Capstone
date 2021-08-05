@@ -5,7 +5,7 @@ import style from './pokemonarea.module.css';
 import { artUrl } from '../api/request';
 
 const PokemonListing = ({ poke, url, id }) => {
-  const [imgSrc, setImgSrc] = useState(`https://raw.githubusercontent.com/PokeAPI/sprites/d41c408f7e5be9848260f470e34069c264091a69/sprites/pokemon/${id}.png`);
+  const [imgSrc, setImgSrc] = useState('https://raw.githubusercontent.com/JohnHernCode/pokemon-images/master/all/0.png');
 
   function capitalizeLetters(string) {
     return string.toUpperCase();
