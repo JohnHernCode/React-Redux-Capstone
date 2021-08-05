@@ -37,4 +37,11 @@ export const fetchPokeData = async (url) => {
   }
 };
 
-export const artUrl = (id) => `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`;
+export const artUrl = (id, callback) => {
+  fetch(`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`)
+    .then((img) => {
+      if (img.ok) {
+        callback(img.url);
+      }
+    }).catch((err) => err);
+};
