@@ -7,7 +7,7 @@ describe('Test the API requests', () => {
   });
 
   test('pokemonByCategory is working and returns an object', async () => {
-    const data = await pokemonByCategory();
+    const data = pokemonByCategory();
     expect(typeof data).toBe('object');
   });
 

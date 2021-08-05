@@ -12,7 +12,13 @@ const PokemonListing = ({ poke, url, id }) => {
   return (
     <div className={style.column}>
       <Link className={style.text} to={{ pathname: `/pokemon/${poke}`, state: { poke, url, id } }}>{capitalizeLetters(poke)}</Link>
-      <img alt={poke} src={artUrl(id)} />
+      <img
+        alt={poke}
+        src={artUrl(id)}
+        onError={(e) => {
+          e.target.src = 'https://raw.githubusercontent.com/PokeAPI/sprites/d41c408f7e5be9848260f470e34069c264091a69/sprites/pokemon/0.png';
+        }}
+      />
     </div>
   );
 };
